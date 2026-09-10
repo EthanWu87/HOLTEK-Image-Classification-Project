@@ -1,6 +1,7 @@
 #include "ht32f493x5_board.h"
 #include "ht32f493x5_clock.h"
 #include "i2c_application.h"
+#include "ht32f493x5_int.h"
 #include "hm01b0.h"
 
 #define UART_BAUD_RATE    2250000
@@ -49,26 +50,13 @@ int main(void)
 
       g_hm01b0.frame_ready = 0;
 
-      width_offset  = HM01B0_IMAGE_WIDTH_DUMMY / 2;
-      height_offset = HM01B0_IMAGE_HEIGHT_DUMMY / 2;
-      
-      start_col = ((HM01B0_IMAGE_WIDTH_EFFECTIVE - EI_TARGET_WIDTH) / 2) + width_offset;
-      start_row = ((HM01B0_IMAGE_HEIGHT_EFFECTIVE - EI_TARGET_HEIGHT) / 2) + height_offset;
+      hm01b0_effective_crop(&g_hm01b0, edge_impulse_clean_buffer, EI_TARGET_WIDTH, EI_TARGET_HEIGHT);
 
       printf("IMG_S");
-      for(int r = 0; r < EI_TARGET_HEIGHT; r++)
+      for(int i = 0; i < EI_BUFFER_SIZE; i++)
       {
-        uint8_t *src_ptr  = &g_hm01b0.frame_buffer[((start_row + r) * HM01B0_IMAGE_WIDTH_ACTIVE) + start_col];
-        uint8_t *dest_ptr = &edge_impulse_clean_buffer[r * EI_TARGET_WIDTH];
-
-        memcpy(dest_ptr, src_ptr, EI_TARGET_WIDTH);
-
-        /* Send one 96-pixel row */
-        for(int c = 0; c < (int)EI_TARGET_WIDTH; c++)
-        {
-          while(usart_flag_get(USART1, USART_TDBE_FLAG) == RESET);
-          usart_data_transmit(USART1, dest_ptr[c]);
-        }
+        while(usart_flag_get(USART1, USART_TDBE_FLAG) == RESET);
+        usart_data_transmit(USART1, edge_impulse_clean_buffer[i]);
       }
       printf("IMG_E\r\n");
 

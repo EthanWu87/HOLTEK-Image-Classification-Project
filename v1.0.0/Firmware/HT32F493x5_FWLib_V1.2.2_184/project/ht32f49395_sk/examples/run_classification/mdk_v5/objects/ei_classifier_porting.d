@@ -1,6 +1,6 @@
 objects/ei_classifier_porting.o: ../src/ei_classifier_porting.cpp \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/porting/ei_classifier_porting.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/dsp/returntypes.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/porting/ei_classifier_porting.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/dsp/returntypes.h \
  ../../../../ht32f493x5_board/ht32f493x5_board.h \
  ../../../../../libraries/cmsis/cm4/device_support/ht32f493x5.h \
  ../../../../../libraries/cmsis/cm4/core_support/core_cm4.h \

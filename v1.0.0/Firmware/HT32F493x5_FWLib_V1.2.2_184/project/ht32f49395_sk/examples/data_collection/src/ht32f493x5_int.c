@@ -149,39 +149,46 @@ uint32_t SysTick_GetTick(void)
 	return uwTick;   
 }
 
-/* =========================================================
- * VSYNC interrupt
- * PA2 / EXINT2 / rising edge
- *
- * Full-image behavior:
- *   - reset HREF debug counter
- *   - stop DMA
- *   - reload full frame = 164 * 122 = 20008 bytes
- *   - start DMA
- *
- * Because HM01B0 gated PCLK is enabled, DMA requests only
- * occur when PCLK capture events are present.
- * ========================================================= */
+/**
+  * @brief  VSYNC interrupt
+  *         PA2 / EXINT2 / rising edge
+  *
+  *         Full-image behavior:
+  *          - reset HREF debug counter
+  *          - stop DMA
+  *          - reload full frame = 164 * 122 = 20008 bytes
+  *          - start DMA
+  *
+  *         Because HM01B0 gated PCLK is enabled, DMA requests only
+  *         occur when PCLK capture events are present.
+  * @param  none
+  * @retval none
+  */
 void EXINT2_IRQHandler(void)
 {
   if(exint_interrupt_flag_get(HM01B0_VSYNC_EXINT_LINE) != RESET)
   {
-    dma_channel_enable(HM01B0_DMA_CHANNEL,FALSE);
+		if(g_hm01b0.frame_ready == 0)
+    {
+      dma_channel_enable(HM01B0_DMA_CHANNEL,FALSE);
 
-    dma_data_number_set(HM01B0_DMA_CHANNEL, HM01B0_IMAGE_SIZE_BYTES);
+      dma_data_number_set(HM01B0_DMA_CHANNEL, HM01B0_IMAGE_SIZE_BYTES);
 
-    dma_channel_enable(HM01B0_DMA_CHANNEL, TRUE);
-
+      dma_channel_enable(HM01B0_DMA_CHANNEL, TRUE);
+    }
+		
     exint_flag_clear(HM01B0_VSYNC_EXINT_LINE);
   }
 }
 
-/* =========================================================
- * HREF interrupt
- * PA4 / EXINT4 / rising edge
- *
- * Does nothing, because HM01B0 gated PCLK is enabled.
- * ========================================================= */
+/**
+  * @brief  HREF interrupt
+  *         PA4 / EXINT4 / rising edge
+  *
+  *         Does nothing, because HM01B0 gated PCLK is enabled.
+  * @param  none
+  * @retval none
+  */
 void EXINT4_IRQHandler(void)
 {
   if(exint_interrupt_flag_get(HM01B0_HREF_EXINT_LINE) != RESET)
@@ -190,9 +197,11 @@ void EXINT4_IRQHandler(void)
   }
 }
 
-/* =========================================================
- * DMA1 Channel2 full-data-transfer interrupt
- * ========================================================= */
+/**
+  * @brief  DMA1 Channel2 full-data-transfer interrupt
+  * @param  none
+  * @retval none
+  */
 void DMA1_Channel2_IRQHandler(void)
 {
   if(dma_interrupt_flag_get(HM01B0_DMA_FDT_FLAG) != RESET)

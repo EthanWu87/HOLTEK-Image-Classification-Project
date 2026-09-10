@@ -1,0 +1,31 @@
+./objects/ht32f493x5_pwc.o: \
+  ..\..\..\..\..\libraries\drivers\src\ht32f493x5_pwc.c \
+  ..\inc\ht32f493x5_conf.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_crm.h \
+  ..\..\..\..\..\libraries\cmsis\cm4\device_support\ht32f493x5.h \
+  ..\..\..\..\..\libraries\cmsis\cm4\core_support\core_cm4.h \
+  ..\..\..\..\..\libraries\cmsis\cm4\device_support\system_ht32f493x5.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_def.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_tmr.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_rtc.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_bpr.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_gpio.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_i2c.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_usart.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_pwc.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_can.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_adc.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_dac.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_spi.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_dma.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_debug.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_flash.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_crc.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_wwdt.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_wdt.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_exint.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_sdio.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_xmc.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_acc.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_misc.h \
+  ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_usb.h

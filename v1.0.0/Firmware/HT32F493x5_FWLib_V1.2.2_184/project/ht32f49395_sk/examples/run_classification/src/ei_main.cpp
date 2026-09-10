@@ -16,34 +16,6 @@ extern uint8_t hm01b0_frame_buffer[HM01B0_IMAGE_SIZE_BYTES];
 
 static uint8_t ei_img_crop_buffer[EI_BUFFER_SIZE];   // crop img form 160*120 to 96*96 (center crop) 
 
-void read_hm01b0_data()
-{
-	int width_offset, height_offset, start_col, start_row;
-
-	width_offset  = HM01B0_IMAGE_WIDTH_DUMMY / 2;
-	height_offset = HM01B0_IMAGE_HEIGHT_DUMMY / 2;
-	
-	start_col = ((HM01B0_IMAGE_WIDTH_EFFECTIVE - EI_TARGET_WIDTH) / 2) + width_offset;
-	start_row = ((HM01B0_IMAGE_HEIGHT_EFFECTIVE - EI_TARGET_HEIGHT) / 2) + height_offset;
-
-	printf("IMG_S");
-	for(int r = 0; r < EI_TARGET_HEIGHT; r++)
-	{
-		uint8_t *src_ptr  = &g_hm01b0.frame_buffer[((start_row + r) * HM01B0_IMAGE_WIDTH_ACTIVE) + start_col];
-		uint8_t *dest_ptr = &ei_img_crop_buffer[r * EI_TARGET_WIDTH];
-
-		memcpy(dest_ptr, src_ptr, EI_TARGET_WIDTH);
-
-		/* Send one 96-pixel row */
-		for(int c = 0; c < (int)EI_TARGET_WIDTH; c++)
-		{
-			while(usart_flag_get(USART1, USART_TDBE_FLAG) == RESET);
-			usart_data_transmit(USART1, dest_ptr[c]);
-		}
-	}
-	printf("IMG_E\r\n");
-}
-
 int raw_feature_get_data(size_t offset, size_t length, float *out_ptr)
 {
 	uint8_t *src = &ei_img_crop_buffer[offset];
@@ -84,8 +56,17 @@ int ei_main(void)
 				nvic_irq_disable(HM01B0_VSYNC_IRQn);
 
 				g_hm01b0.frame_ready = 0;
-				read_hm01b0_data();
+				
+				hm01b0_effective_crop(&g_hm01b0, ei_img_crop_buffer, EI_TARGET_WIDTH, EI_TARGET_HEIGHT);
 
+				printf("IMG_S");
+        for(int i = 0; i < EI_BUFFER_SIZE; i++)
+        {
+          while(usart_flag_get(USART1, USART_TDBE_FLAG) == RESET);
+          usart_data_transmit(USART1, ei_img_crop_buffer[i]);
+        }
+        printf("IMG_E\r\n");
+				
 				exint_flag_clear(HM01B0_VSYNC_EXINT_LINE);
 				nvic_irq_enable(HM01B0_VSYNC_IRQn, 0, 0);
 				

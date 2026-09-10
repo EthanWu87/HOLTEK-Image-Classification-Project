@@ -464,6 +464,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\middlewares\i2c_application_library\i2c_application.c</FilePath>
             </File>
+            <File>
+              <FileName>ht32f493x5_pwc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\libraries\drivers\src\ht32f493x5_pwc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

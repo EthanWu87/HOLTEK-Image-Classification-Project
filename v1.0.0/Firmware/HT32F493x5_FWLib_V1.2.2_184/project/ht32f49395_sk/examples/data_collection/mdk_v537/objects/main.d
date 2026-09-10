@@ -31,4 +31,4 @@
   ..\..\..\..\..\libraries\drivers\inc\ht32f493x5_usb.h \
   ..\inc\ht32f493x5_clock.h \
   ..\..\..\..\..\middlewares\i2c_application_library\i2c_application.h \
-  ..\src\hm01b0.h
+  ..\inc\ht32f493x5_int.h ..\src\hm01b0.h

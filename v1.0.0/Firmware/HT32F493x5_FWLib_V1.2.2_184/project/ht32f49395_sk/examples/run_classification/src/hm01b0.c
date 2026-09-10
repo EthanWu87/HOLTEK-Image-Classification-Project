@@ -32,7 +32,7 @@ int hm01b0_init(hm01b0_t *camera, uint8_t *buffer, uint32_t size)
 
   /* Auto exposure */
   camera->ae_enable          = 0x01;
-  camera->ae_target          = 0x5E;
+  camera->ae_target          = 0x5A;
   camera->ae_max_integration = 0x0390;
 
   /* Group hold / consume */
@@ -331,6 +331,23 @@ void hm01b0_parallel_init(hm01b0_t *camera)
   dma_init(HM01B0_DMA_CHANNEL, &dma_init_struct);
   dma_interrupt_enable(HM01B0_DMA_CHANNEL, DMA_FDT_INT, TRUE);
   nvic_irq_enable(HM01B0_DMA_IRQn, 0, 0);
+}
+
+void hm01b0_effective_crop(const hm01b0_t *camera, uint8_t *dstImage, uint16_t dstWidth, uint16_t dstHeight)
+{
+  uint16_t start_col;
+  uint16_t start_row;
+
+  start_col = ((HM01B0_IMAGE_WIDTH_EFFECTIVE - dstWidth) / 2) + (HM01B0_IMAGE_WIDTH_DUMMY / 2);
+
+  start_row = ((HM01B0_IMAGE_HEIGHT_EFFECTIVE - dstHeight) / 2) + (HM01B0_IMAGE_HEIGHT_DUMMY / 2);
+
+  for(uint16_t row = 0; row < dstHeight; row++)
+  {
+    const uint8_t *source = &camera->frame_buffer[(start_row + row) * HM01B0_IMAGE_WIDTH_ACTIVE + start_col];
+
+    memcpy(&dstImage[row * dstWidth], source, dstWidth);
+  }
 }
 
 void hm01b0_write_reg8(hm01b0_t *camera, uint16_t address, uint8_t value)

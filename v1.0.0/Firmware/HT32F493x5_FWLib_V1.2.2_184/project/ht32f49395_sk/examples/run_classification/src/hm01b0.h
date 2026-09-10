@@ -140,6 +140,10 @@ typedef struct
   uint8_t  test_pattern;
 } hm01b0_t;
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 extern hm01b0_t g_hm01b0;
 
 int  hm01b0_init(hm01b0_t *camera, uint8_t *buffer, uint32_t size);
@@ -149,9 +153,15 @@ void hm01b0_parallel_init(hm01b0_t *camera);
 
 int hm01b0_reset(hm01b0_t *camera);
 
+void hm01b0_effective_crop(const hm01b0_t *camera, uint8_t *dstImage, uint16_t dstWidth, uint16_t dstHeight);
+
 void hm01b0_write_reg8(hm01b0_t *camera, uint16_t address, uint8_t value);
 void hm01b0_write_reg16(hm01b0_t *camera, uint16_t address, uint16_t value);
 uint8_t hm01b0_read_reg8(hm01b0_t *camera, uint16_t address);
 uint16_t hm01b0_read_reg16(hm01b0_t *camera, uint16_t address);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
