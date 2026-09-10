@@ -13,7 +13,6 @@
 ".\objects\ht32f493x5_i2c.o"
 ".\objects\ht32f493x5_dma.o"
 ".\objects\i2c_application.o"
-".\objects\ht32f493x5_pwc.o"
 ".\objects\system_ht32f493x5.o"
 ".\objects\startup_ht32f493x5.o"
 --strict --scatter ".\objects\data_collection.sct"

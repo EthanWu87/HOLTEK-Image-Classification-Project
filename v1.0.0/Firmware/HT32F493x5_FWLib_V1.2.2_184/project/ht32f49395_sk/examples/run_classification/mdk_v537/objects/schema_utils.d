@@ -1,23 +1,23 @@
 objects/schema_utils.o: \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/schema_utils.cpp \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_utils.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/flatbuffers.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_array.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_base.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_stl_emulation.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_vector.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer_ref.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_verifier.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_detached_buffer.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_allocator.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_default_allocator.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_flatbuffer_builder.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_string.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_struct.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_table.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_vector_downward.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_generated.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/compatibility.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/op_macros.h \
- C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.2/edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/debug_log.h
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/schema_utils.cpp \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_utils.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/flatbuffers.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_array.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_base.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_stl_emulation.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_vector.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_buffer_ref.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_verifier.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_detached_buffer.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_allocator.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_default_allocator.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_flatbuffer_builder.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_string.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_struct.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_table.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/third_party/flatbuffers/include/flatbuffers/fb_vector_downward.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/tensorflow/lite/schema/schema_generated.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/internal/compatibility.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/tensorflow/lite/kernels/op_macros.h \
+ C:/Users/user/AppData/Local/Arm/Packs/EdgeImpulse/EI-SDK/1.95.10/edgeimpulse/edge-impulse-sdk/tensorflow/lite/micro/debug_log.h

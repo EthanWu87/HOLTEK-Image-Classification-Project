@@ -427,12 +427,12 @@
           <targetInfo name="run_classification" versionMatchMode="fixed"/>
         </targetInfos>
       </package>
-      <package name="EI-SDK" vendor="EdgeImpulse" version="1.95.2">
+      <package name="EI-SDK" vendor="EdgeImpulse" version="1.95.10">
         <targetInfos>
           <targetInfo name="run_classification" versionMatchMode="fixed"/>
         </targetInfos>
       </package>
-      <package name="HOLTEK_Image_Classification" vendor="EdgeImpulse" version="14.0.0">
+      <package name="HOLTEK_Image_Classification" vendor="EdgeImpulse" version="15.0.0">
         <targetInfos>
           <targetInfo name="run_classification" versionMatchMode="fixed"/>
         </targetInfos>
@@ -463,14 +463,14 @@
           <targetInfo name="run_classification"/>
         </targetInfos>
       </component>
-      <component Cclass="EdgeImpulse" Cgroup="SDK" Cvendor="EdgeImpulse" Cversion="1.95.2" condition="CMSIS packages" ymlID="EdgeImpulse:SDK">
-        <package name="EI-SDK" schemaVersion="1.7.7" url="" vendor="EdgeImpulse" version="1.95.2"/>
+      <component Cclass="EdgeImpulse" Cgroup="SDK" Cvendor="EdgeImpulse" Cversion="1.95.10" condition="CMSIS packages" ymlID="EdgeImpulse:SDK">
+        <package name="EI-SDK" schemaVersion="1.7.7" url="" vendor="EdgeImpulse" version="1.95.10"/>
         <targetInfos>
           <targetInfo name="run_classification"/>
         </targetInfos>
       </component>
-      <component Cclass="EdgeImpulse" Cgroup="model" Csub="HOLTEK_Image_Classification" Cvendor="EdgeImpulse" Cversion="14.0.0" condition="CMSIS packages" ymlID="EdgeImpulse:model:HOLTEK_Image_Classification">
-        <package name="HOLTEK_Image_Classification" schemaVersion="1.7.7" url="" vendor="EdgeImpulse" version="14.0.0"/>
+      <component Cclass="EdgeImpulse" Cgroup="model" Csub="HOLTEK_Image_Classification" Cvendor="EdgeImpulse" Cversion="15.0.0" condition="CMSIS packages" ymlID="EdgeImpulse:model:HOLTEK_Image_Classification">
+        <package name="HOLTEK_Image_Classification" schemaVersion="1.7.7" url="" vendor="EdgeImpulse" version="15.0.0"/>
         <targetInfos>
           <targetInfo name="run_classification"/>
         </targetInfos>
