@@ -39,7 +39,7 @@ int hm01b0_init(hm01b0_t *camera, uint8_t *buffer, uint32_t size)
   camera->group_hold         = 0x01;
   camera->group_consume      = 0x00;
 
-  /* OSC mode */
+	/* OSC mode. MCLK en: 0x01, OSC en: 0x00*/
   camera->osc_mode_en        = 0x01;
 
   /* Walking-1 test pattern */
@@ -274,7 +274,6 @@ void hm01b0_parallel_init(hm01b0_t *camera)
   gpio_init_struct.gpio_pull = GPIO_PULL_DOWN;
   gpio_init_struct.gpio_pins = HM01B0_PCLK_PIN;
   gpio_init(HM01B0_PCLK_PORT, &gpio_init_struct);
-  gpio_pin_remap_config(TMR3_MUX_10, TRUE);
 
   /* VSYNC EXINT */
   gpio_exint_line_config(HM01B0_VSYNC_PORT_SRC, HM01B0_VSYNC_PIN_SRC);

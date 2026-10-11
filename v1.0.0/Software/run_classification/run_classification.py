@@ -4,7 +4,7 @@ import cv2
 import time
 import re
 
-SERIAL_PORT = 'COM6'
+SERIAL_PORT = 'COM3'
 BAUD_RATE = 2250000
 
 WIDTH = 96
